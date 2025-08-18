@@ -26,10 +26,10 @@ vars:
 
 seeds:
   jaffle_shop:
-    +schema: raw
+    +schema: dbt_azaha
     jaffle-data:
-      +enabled: "{{ var('load_source_data', false) }}"
-
+      +enabled: "{{ var('load_source_data', true) }}"
+      
 models:
   jaffle_shop:
     staging:
