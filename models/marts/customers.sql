@@ -1,3 +1,5 @@
+-- I'm adding these lines to create
+-- a merge conflict in dbt Studio
 with
 
 customers as (
@@ -5,7 +7,7 @@ customers as (
     select * from {{ ref('stg_customers') }}
 
 ),
-
+--- comment
 orders as (
 
     select * from {{ ref('orders') }}
