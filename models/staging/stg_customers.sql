@@ -6,6 +6,8 @@ source as (
 
 ),
 
+
+--- comment 
 renamed as (
 
     select
