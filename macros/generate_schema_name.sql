@@ -2,6 +2,12 @@
 
     {% set default_schema = target.schema %}
 
+    {% if env_var("DBT_FIRST_ENV_VAR") == '123' %}
+        {{ log("env123" ) }}
+    {% elif env_var("DBT_FIRST_ENV_VAR") == '456' %}
+        {{ log("job456" ) }}
+    {% endif %}
+    
     {# seeds go in a global `raw` schema #}
     {% if node.resource_type == 'seed' %}
         {{ custom_schema_name | trim }}
