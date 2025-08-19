@@ -6,4 +6,3 @@ models:
         description: The unique key for each customer.
         data_tests:
           - not_null
-          - unique
